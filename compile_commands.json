@@ -2,11 +2,16 @@
   {
     "directory": "/Users/gadkadosh/Code/Hazel",
     "file": "hazel/src/Application.cpp",
-    "command": "clang++  -c hazel/src/Application.cpp -o hazel/obj/Application.o"
+    "command": "clang++ -I./hazel/vendor/spdlog/include -c hazel/src/Application.cpp -o hazel/obj/Application.o"
+  },
+  {
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "hazel/src/Log.cpp",
+    "command": "clang++ -I./hazel/vendor/spdlog/include -c hazel/src/Log.cpp -o hazel/obj/Log.o"
   },
   {
     "directory": "/Users/gadkadosh/Code/Hazel",
     "file": "sandbox/src/SandboxApp.cpp",
-    "command": "clang++  -I./hazel/src -L./hazel/bin -lhazel -o sandbox/bin/sandbox sandbox/src/SandboxApp.cpp"
+    "command": "clang++ -I./hazel/vendor/spdlog/include -I./hazel/src -L./hazel/bin -lhazel -o sandbox/bin/sandbox sandbox/src/SandboxApp.cpp"
   }
 ]

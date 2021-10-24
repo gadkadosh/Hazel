@@ -1,5 +1,5 @@
 CC=clang++
-CFLAGS=
+CFLAGS=-I./hazel/vendor/spdlog/include
 
 SRC=hazel/src
 OBJ=hazel/obj
