@@ -2,10 +2,8 @@
 
 class Sandbox : public Hazel::Application {
 public:
-  Sandbox() {}
-  ~Sandbox() {}
+    Sandbox() {}
+    ~Sandbox() {}
 };
 
-Hazel::Application* Hazel::CreateApplication() {
-    return new Sandbox();
-}
+Hazel::Application *Hazel::CreateApplication() { return new Sandbox(); }
