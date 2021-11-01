@@ -1,17 +1,17 @@
 [
-  {
-    "directory": "/Users/gadkadosh/Code/Hazel",
-    "file": "hazel/src/Application.cpp",
-    "command": "clang++  -include-pch hazel/obj/hzpch.h.pch -I./hazel/src -I./hazel/vendor/spdlog/include -c hazel/src/Application.cpp -o hazel/obj/Application.o"
-  },
-  {
-    "directory": "/Users/gadkadosh/Code/Hazel",
-    "file": "hazel/src/Log.cpp",
-    "command": "clang++  -include-pch hazel/obj/hzpch.h.pch -I./hazel/src -I./hazel/vendor/spdlog/include -c hazel/src/Log.cpp -o hazel/obj/Log.o"
-  },
-  {
-    "directory": "/Users/gadkadosh/Code/Hazel",
-    "file": "sandbox/src/SandboxApp.cpp",
-    "command": "clang++  -I./hazel/src -I./hazel/vendor/spdlog/include -L./hazel/bin -lhazel -o sandbox/bin/sandbox sandbox/src/SandboxApp.cpp"
-  }
+    {
+        "directory": "/Users/gadkadosh/Code/Hazel",
+        "file": "Hazel/src/Application.cpp",
+        "command": "clang++  -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/spdlog/include -c Hazel/src/Application.cpp -o Hazel/obj/Application.o"
+    },
+    {
+        "directory": "/Users/gadkadosh/Code/Hazel",
+        "file": "Hazel/src/Log.cpp",
+        "command": "clang++  -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/spdlog/include -c Hazel/src/Log.cpp -o Hazel/obj/Log.o"
+    },
+    {
+        "directory": "/Users/gadkadosh/Code/Hazel",
+        "file": "sandbox/src/SandboxApp.cpp",
+        "command": "clang++  -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/spdlog/include -L./Hazel/bin -lhazel -o sandbox/bin/sandbox sandbox/src/SandboxApp.cpp"
+    }
 ]

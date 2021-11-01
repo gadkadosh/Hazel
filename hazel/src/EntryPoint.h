@@ -1,8 +1,8 @@
 #pragma once
 
-extern Hazel::Application* Hazel::CreateApplication();
+extern Hazel::Application *Hazel::CreateApplication();
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
     Hazel::Log::Init();
     HZ_CORE_WARN("Initialized Log");
     int a = 5;
