@@ -36,6 +36,8 @@ void WindowsWindow::Init(const WindowProps &props) {
         // TODO: glfwTerminate on system shutdown
         int success = glfwInit();
         HZ_CORE_ASSERT(success, "Could not initialize GLFW!");
+
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
         glfwSetErrorCallback(GLFWErrorCallback);
 
         s_GLFWInitialized = true;
@@ -44,9 +46,11 @@ void WindowsWindow::Init(const WindowProps &props) {
     m_Window = glfwCreateWindow((int)props.Width, (int)props.Height,
                                 props.Title.c_str(), nullptr, nullptr);
     glfwMakeContextCurrent(m_Window);
+    glfwSetWindowUserPointer(m_Window, &m_Data);
+
     int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     HZ_CORE_ASSERT(status, "Failed to initialize glad.")
-    glfwSetWindowUserPointer(m_Window, &m_Data);
+
     SetVSync(true);
 
     // Set GLFW callbacks

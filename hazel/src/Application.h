@@ -21,10 +21,17 @@ public:
     void PushLayer(Layer *layer);
     void PushOverlay(Layer *layer);
 
+    inline Window &GetWindow() { return *m_Window; }
+
+    static inline Application &Get() { return *s_Instance; }
+
 private:
     std::unique_ptr<Window> m_Window;
     bool m_Running = true;
     LayerStack m_LayerStack;
+
+private:
+    static Application *s_Instance;
 };
 
 // To be defined in CLIENT

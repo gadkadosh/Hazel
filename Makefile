@@ -1,6 +1,6 @@
 CXX=clang++
 CXXFLAGS=
-INCLUDES=-I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include
+INCLUDES=-I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui
 FRAMEWORKS=-framework Cocoa -framework OpenGL -framework IOKit 
 DEFINES=-DGLFW_INCLUDE_NONE
 
@@ -15,7 +15,7 @@ PCH=hzpch.h
 all: $(HAZEL_BIN) $(SANDBOX_BIN)
 
 $(HAZEL_BIN): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $(INCLUDES) $(FRAMEWORKS) -L./Hazel/vendor/GLFW/src -L./Hazel/vendor/glad/src -lglfw3 -lglad -shared -fpic $^ -o $@
+	$(CXX) $(CXXFLAGS) $(INCLUDES) $(FRAMEWORKS) -L./Hazel/vendor/GLFW/src -L./Hazel/vendor/glad/src -L./Hazel/vendor/imgui -lglfw3 -lglad -limgui -shared -fpic $^ -o $@
 
 $(OBJ)/%.o: $(SRC)/%.cpp $(OBJ)/$(PCH).pch
 	mkdir -p $(dir $@)
