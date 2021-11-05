@@ -14,7 +14,7 @@ public:
 
     inline unsigned int GetWidth() const override { return m_Data.Width; }
     inline unsigned int GetHeight() const override { return m_Data.Height; }
-    inline void *GetNativeWindow() const override { return m_Window; }
+    inline virtual void *GetNativeWindow() const override { return m_Window; }
 
     // Window attributes
     inline void SetEventCallback(const EventCallbackFn &callback) override {

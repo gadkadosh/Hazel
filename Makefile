@@ -1,5 +1,5 @@
 CXX=clang++
-CXXFLAGS=-g
+CXXFLAGS=-g -std=c++17
 INCLUDES=-I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui
 FRAMEWORKS=-framework Cocoa -framework OpenGL -framework IOKit 
 DEFINES=-DGLFW_INCLUDE_NONE
