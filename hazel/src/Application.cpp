@@ -51,9 +51,6 @@ void Application::Run() {
         for (Layer *layer : m_LayerStack)
             layer->OnUpdate();
 
-        auto [x, y] = Input::GetMousePosition();
-        HZ_CORE_TRACE("{0}, {1}", x, y);
-
         m_Window->OnUpdate();
     }
 }
