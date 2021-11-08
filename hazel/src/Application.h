@@ -3,6 +3,7 @@
 #include "Core.h"
 #include "Events/ApplicationEvent.h"
 #include "Events/Event.h"
+#include "ImGui/ImGuiLayer.h"
 #include "LayerStack.h"
 #include "Window.h"
 
@@ -27,6 +28,7 @@ public:
 
 private:
     std::unique_ptr<Window> m_Window;
+    ImGuiLayer *m_ImGuiLayer;
     bool m_Running = true;
     LayerStack m_LayerStack;
 
