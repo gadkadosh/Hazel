@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Renderer/GraphicsContext.h"
 #include "Window.h"
 #include <GLFW/glfw3.h>
 
@@ -27,7 +28,9 @@ private:
     virtual void Init(const WindowProps &props);
     virtual void Shutdown();
 
+private:
     GLFWwindow *m_Window;
+    GraphicsContext *m_Context;
 
     struct WindowData {
         std::string Title;

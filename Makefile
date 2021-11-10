@@ -5,30 +5,30 @@ FRAMEWORKS=-framework Cocoa -framework IOKit
 LIBS=-L./hazel/vendor/GLFW/src -lglfw3 -L./hazel/vendor/glad/src -lglad -L./hazel/vendor/imgui -limgui
 DEFINES=-DGLFW_INCLUDE_NONE
 
-SRC=hazel/src
-OBJ=hazel/obj
-HZ_SOURCES=$(shell find $(SRC) -type f -name *.cpp)
-HZ_OBJECTS=$(patsubst $(SRC)/%.cpp,$(OBJ)/%.o,$(HZ_SOURCES))
+SRC_DIR=hazel/src
+OBJ_DIR=hazel/obj
+SRCS=$(shell find $(SRC_DIR) -type f -name *.cpp)
+PCH=hzpch.h
+OBJS=$(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 HAZEL_BIN=hazel/bin/libhazel.a
 SANDBOX_BIN=sandbox/bin/sandbox
-PCH=hzpch.h
 
 all: $(HAZEL_BIN) $(SANDBOX_BIN)
 
-$(HAZEL_BIN): $(HZ_OBJECTS)
+$(HAZEL_BIN): $(OBJS)
 	mkdir -p $(dir $@)
-	ar rv $(HAZEL_BIN) $(HZ_OBJECTS)
+	ar rv $(HAZEL_BIN) $(OBJS)
 	ranlib $(HAZEL_BIN)
 
-$(OBJ)/%.o: $(SRC)/%.cpp $(OBJ)/$(PCH).pch
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(OBJ_DIR)/$(PCH).pch
 	mkdir -p $(dir $@)
-	$(CXX) $(CXXFLAGS) -include-pch $(OBJ)/$(PCH).pch $(INCLUDES) $(DEFINES) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -include-pch $(OBJ_DIR)/$(PCH).pch $(INCLUDES) $(DEFINES) -c $< -o $@
 
-$(OBJ)/$(PCH).pch: $(SRC)/$(PCH)
+$(OBJ_DIR)/$(PCH).pch: $(SRC_DIR)/$(PCH)
 	mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -x c++-header $^ -o $@
 
-$(SANDBOX_BIN):
+$(SANDBOX_BIN): $(HAZEL_BIN)
 	mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) $(FRAMEWORKS) $(LIBS) -o $@ sandbox/src/SandboxApp.cpp $(HAZEL_BIN)
 

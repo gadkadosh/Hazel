@@ -1,47 +1,256 @@
 [
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/Log.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/Log.cpp -o Hazel/obj/Log.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/ImGui/ImGuiLayer.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/ImGui/ImGuiLayer.cpp -o Hazel/obj/ImGui/ImGuiLayer.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/Layer.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/Layer.cpp -o Hazel/obj/Layer.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/Platform/Windows/WindowsWindow.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/Platform/Windows/WindowsWindow.cpp -o Hazel/obj/Platform/Windows/WindowsWindow.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/Platform/Windows/WindowsInput.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/Platform/Windows/WindowsInput.cpp -o Hazel/obj/Platform/Windows/WindowsInput.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp -o Hazel/obj/Platform/OpenGL/ImGuiOpenGLRenderer.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/LayerStack.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/LayerStack.cpp -o Hazel/obj/LayerStack.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "Hazel/src/Application.cpp",
-        "command": "clang++ -g -std=c++17 -include-pch Hazel/obj/hzpch.h.pch -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -DGLFW_INCLUDE_NONE -c Hazel/src/Application.cpp -o Hazel/obj/Application.o"
-    },
-    {
-        "directory": "/Users/gadkadosh/Code/Hazel",
-        "file": "sandbox/src/SandboxApp.cpp",
-        "command": "clang++ -g -std=c++17 -I./Hazel/src -I./Hazel/vendor/GLFW/include -I./Hazel/vendor/glad/include -I./Hazel/vendor/spdlog/include -I./Hazel/vendor/imgui -I./Hazel/vendor/glm -L./Hazel/bin -lhazel -o sandbox/bin/sandbox sandbox/src/SandboxApp.cpp"
-    }
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-c",
+      "-g",
+      "-std=c++17",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-x",
+      "c++-header",
+      "-o",
+      "hazel/obj/hzpch.h.pch",
+      "hazel/src/hzpch.h"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/hzpch.h",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/hzpch.h.pch"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/Log.o",
+      "hazel/src/Log.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/Log.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/Log.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/ImGui/ImGuiLayer.o",
+      "hazel/src/ImGui/ImGuiLayer.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/ImGui/ImGuiLayer.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/ImGui/ImGuiLayer.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/ImGui/ImGuiBuild.o",
+      "hazel/src/ImGui/ImGuiBuild.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/ImGui/ImGuiBuild.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/ImGui/ImGuiBuild.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/Layer.o",
+      "hazel/src/Layer.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/Layer.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/Layer.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/Platform/Windows/WindowsWindow.o",
+      "hazel/src/Platform/Windows/WindowsWindow.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/Platform/Windows/WindowsWindow.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/Platform/Windows/WindowsWindow.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/Platform/Windows/WindowsInput.o",
+      "hazel/src/Platform/Windows/WindowsInput.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/Platform/Windows/WindowsInput.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/Platform/Windows/WindowsInput.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/Platform/OpenGL/OpenGLContext.o",
+      "hazel/src/Platform/OpenGL/OpenGLContext.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/Platform/OpenGL/OpenGLContext.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/Platform/OpenGL/OpenGLContext.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/LayerStack.o",
+      "hazel/src/LayerStack.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/LayerStack.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/LayerStack.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-g",
+      "-std=c++17",
+      "-include-pch",
+      "hazel/obj/hzpch.h.pch",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-DGLFW_INCLUDE_NONE",
+      "-c",
+      "-o",
+      "hazel/obj/Application.o",
+      "hazel/src/Application.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/hazel/src/Application.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/hazel/obj/Application.o"
+  },
+  {
+    "arguments": [
+      "/usr/local/opt/llvm/bin/clang++",
+      "-c",
+      "-g",
+      "-std=c++17",
+      "-I./hazel/src",
+      "-I./hazel/vendor/GLFW/include",
+      "-I./hazel/vendor/glad/include",
+      "-I./hazel/vendor/spdlog/include",
+      "-I./hazel/vendor/imgui",
+      "-I./hazel/vendor/glm",
+      "-framework",
+      "Cocoa",
+      "-framework",
+      "IOKit",
+      "hazel/bin/libhazel.a",
+      "-o",
+      "sandbox/bin/sandbox",
+      "sandbox/src/SandboxApp.cpp"
+    ],
+    "directory": "/Users/gadkadosh/Code/Hazel",
+    "file": "/Users/gadkadosh/Code/Hazel/sandbox/src/SandboxApp.cpp",
+    "output": "/Users/gadkadosh/Code/Hazel/sandbox/bin/sandbox"
+  }
 ]
